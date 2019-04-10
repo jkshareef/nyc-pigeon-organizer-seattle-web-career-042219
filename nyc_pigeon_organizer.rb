@@ -26,10 +26,10 @@ def nyc_pigeon_organizer(data)
     info.each do |key, values|
       pigeon_list.each do |name, hash|
         if values.include?(name)
-          binding.pry
           hash[category] << key.to_s
         end
       end
     end
   end
+  pigeon_list
 end
