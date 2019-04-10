@@ -13,7 +13,6 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  binding.pry
   
   #data.each do |category, info|
    # info.each do |key, value|
