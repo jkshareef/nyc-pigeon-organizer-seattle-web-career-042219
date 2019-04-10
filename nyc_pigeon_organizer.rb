@@ -8,7 +8,9 @@ def nyc_pigeon_organizer(data)
   
   data.each do |category, info|
     info.each do |key, value|
-      pigeon_list[value] = {}
+      for item in key.values
+        pigeon_list[item] = {}
+      end
     end
   end
   binding.pry
