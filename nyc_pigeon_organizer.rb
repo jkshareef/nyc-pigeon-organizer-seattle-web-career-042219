@@ -14,8 +14,21 @@ def nyc_pigeon_organizer(data)
     end
   end
   
-  #data.each do |category, info|
-   # info.each do |key, value|
-    #  if key.values.include?
-      
+  data.each do |category, info|
+    info.each do |key, values|
+      pigeon_list.each do |name, hash|
+        hash[category] = []
+      end
+    end
+  end
+  
+  data.each do |category, info|
+    info.each do |key, values|
+      pigeon_list.each do |name, hash|
+        if values.include?(name)
+          hash[category] << key.to_s
+        end
+      end
+    end
+  end
 end
