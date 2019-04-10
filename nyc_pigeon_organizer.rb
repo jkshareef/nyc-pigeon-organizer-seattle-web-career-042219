@@ -7,7 +7,7 @@ def nyc_pigeon_organizer(data)
   pigeon_list = Hash.new
   
   data.each do |category, info|
-    info.each do |key, value|
+    info.each do |key, values|
       binding.pry
       for item in key.values
         pigeon_list[item] = {}
