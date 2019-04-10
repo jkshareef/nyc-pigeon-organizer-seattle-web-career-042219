@@ -17,16 +17,16 @@ def nyc_pigeon_organizer(data)
   data.each do |category, info|
     info.each do |key, values|
       pigeon_list.each do |name, hash|
-        #binding.pry
         hash[category] = []
       end
     end
   end
-  binding.pry
+  
   data.each do |category, info|
     info.each do |key, values|
       pigeon_list.each do |name, hash|
         if values.include?(name)
+          binding.pry
           hash[category] << key.to_s
         end
       end
