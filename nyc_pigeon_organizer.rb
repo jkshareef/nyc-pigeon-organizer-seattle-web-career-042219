@@ -8,6 +8,7 @@ def nyc_pigeon_organizer(data)
   
   data.each do |category, info|
     info.each do |key, value|
+      binding.pry
       for item in key.values
         pigeon_list[item] = {}
       end
