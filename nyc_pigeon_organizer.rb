@@ -6,6 +6,8 @@ def nyc_pigeon_organizer(data)
   
   pigeon_list = Hash.new
   
+  # populates pigeon_list with name as keys with values of empty hashes
+  
   data.each do |category, info|
     info.each do |key, values|
       for item in values
@@ -14,6 +16,8 @@ def nyc_pigeon_organizer(data)
     end
   end
   
+  # creates categories as keys within hash, and creates empty arrays as values
+  
   data.each do |category, info|
     info.each do |key, values|
       pigeon_list.each do |name, hash|
@@ -21,6 +25,8 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
+  
+  # appends category info to empty arrays
   
   data.each do |category, info|
     info.each do |key, values|
